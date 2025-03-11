@@ -42,18 +42,22 @@ let msgs = [
 
 function update(messages) {
    let ul = document.getElementById("messages");
-   ul.innerHTML = "";
-   for (let i = 0; i < messages.length; i++) {
-      let li = document.createElement("li");
-      li.innerHTML = messages[i].msg;
-      li.className = "messageContent"; // Adding the class here
-      ul.appendChild(li);
+   if (ul) {
+      ul.innerHTML = "";
+      for (let i = 0; i < messages.length; i++) {
+         let li = document.createElement("li");
+         li.innerHTML = messages[i].msg;
+         li.className = "messageContent"; // Adding the class here
+         ul.appendChild(li);
+      }
+      console.log("Updated the list with new messages !");
    }
-
-   console.log("Updated the list with new messages !")
 };
 
-update(msgs);
+// Initialize messages when DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+   update(msgs);
+});
 
 // Function to add a new message from the text area
 function addMessage() {
