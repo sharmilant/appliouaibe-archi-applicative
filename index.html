@@ -11,18 +11,25 @@
 <body>
 
   <script src="script.js"></script>
-  <h1 class="mainTitle"> Messages subject</h1>
-  <ul class="messageContainer" id="messages">
-    <li class="messageContent">Message 1</li>
-    <li class="messageContent">Message 2</li>
-    <li class="messageContent">Message 3</li>
-    <li class="messageContent">Message 4</li>
-    <li class="messageContent">Message 5</li>
-  </ul>
+  <h1 class="mainTitle">Message Server</h1>
+  <h2 class="secondaryTitle"> Messages subject</h1>
+    <ul class="messageContainer" id="messages">
+      <!-- Messages will be populated from JavaScript -->
+    </ul>
+    <h2 class="secondaryTitle">Pseudo : </h2>
+    <textarea class="textInput" id="pseudoInput" placeholder="Enter you pseudo here"></textarea>
 
-  <textarea class="messageInput" placeholder="Enter your message here">Enter your message here</textarea>
 
-  <button class="sendButton" onclick=addMessage()>Send</button>
+
+
+    <h2 class="secondaryTitle"> Add you message here : </h2>
+    <textarea class="textInput" id="messageInput"
+      placeholder="Enter your message here">Enter your message here</textarea>
+
+    <button class="messagesButton" id="sendButton" onclick=addMessage()>Send</button>
+    <button class="messagesButton" id="deleteButton" onclick=deleteMessages()>Delete All</button>
 </body>
+
+
 
 </html>
