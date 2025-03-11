@@ -2,3 +2,71 @@ html {
   height: 100%;
   width: 100%;
 }
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.mainTitle {
+  text-align: center;
+  color: #174EA6;
+  margin-top: 20px;
+  /* Fixed the typo here */
+}
+
+.messageContainer {
+  list-style-type: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 8px;
+  background: #4285F4;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.messageContent {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  color: white;
+}
+
+.messageContent:hover {
+  background-color: #A50E0E;
+  /* Change the text color on hover */
+}
+
+.messageContent:last-child {
+  border-bottom: none;
+}
+
+.messageInput {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 20px auto;
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.sendButton {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px auto;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sendButton:hover {
+  background-color: #45a049;
+}

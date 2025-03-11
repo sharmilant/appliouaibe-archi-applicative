@@ -9,8 +9,20 @@
 </head>
 
 <body>
-  Hello world
+
   <script src="script.js"></script>
+  <h1 class="mainTitle"> Messages subject</h1>
+  <ul class="messageContainer" id="messages">
+    <li class="messageContent">Message 1</li>
+    <li class="messageContent">Message 2</li>
+    <li class="messageContent">Message 3</li>
+    <li class="messageContent">Message 4</li>
+    <li class="messageContent">Message 5</li>
+  </ul>
+
+  <textarea class="messageInput" placeholder="Enter your message here">Enter your message here</textarea>
+
+  <button class="sendButton" onclick=addMessage()>Send</button>
 </body>
 
 </html>
