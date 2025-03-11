@@ -12,24 +12,18 @@
 
   <script src="script.js"></script>
   <h1 class="mainTitle">Message Server</h1>
-  <h2 class="secondaryTitle"> Messages subject</h1>
-    <ul class="messageContainer" id="messages">
-      <!-- Messages will be populated from JavaScript -->
-    </ul>
-    <h2 class="secondaryTitle">Pseudo : </h2>
-    <textarea class="textInput" id="pseudoInput" placeholder="Enter you pseudo here"></textarea>
+  <h2 class="secondaryTitle">Messages subject</h2> <!-- Fixed the closing tag here -->
+  <ul class="messageContainer" id="messages">
+    <!-- Messages will be populated from JavaScript -->
+  </ul>
+  <h2 class="secondaryTitle">Pseudo:</h2>
+  <textarea class="textInput" id="pseudoInput" placeholder="Enter your pseudo here"></textarea>
 
+  <h2 class="secondaryTitle">Add your message here:</h2>
+  <textarea class="textInput" id="messageInput" placeholder="Enter your message here"></textarea>
 
-
-
-    <h2 class="secondaryTitle"> Add you message here : </h2>
-    <textarea class="textInput" id="messageInput"
-      placeholder="Enter your message here">Enter your message here</textarea>
-
-    <button class="messagesButton" id="sendButton" onclick=addMessage()>Send</button>
-    <button class="messagesButton" id="deleteButton" onclick=deleteMessages()>Delete All</button>
+  <button class="messagesButton" id="sendButton" onclick="addMessage()">Send</button>
+  <button class="messagesButton" id="deleteButton" onclick="deleteMessages()">Delete All</button>
 </body>
-
-
 
 </html>
