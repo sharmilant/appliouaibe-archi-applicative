@@ -8,7 +8,7 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<body class="light-mode">
 
   <script src="script.js"></script>
   <h1 class="mainTitle">Message Server</h1>
@@ -24,6 +24,7 @@
 
   <button class="messagesButton" id="sendButton" onclick="addMessage()">Send</button>
   <button class="messagesButton" id="deleteButton" onclick="deleteMessages()">Delete All</button>
+  <button class="mode-button" onclick="switchMode()" id="modeButton">☀️</button> <!-- Initial icon can be sun -->
 </body>
 
 </html>

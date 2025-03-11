@@ -2,7 +2,7 @@
  * Exercises
 *******************************/
 function fact(n) {
-   if (n == 0) {
+   if (n === 0) {
       return 1;
    } else {
       return n * fact(n - 1);
@@ -38,12 +38,12 @@ function update(messages) {
       ul.innerHTML = "";
       for (let i = 0; i < messages.length; i++) {
          let li = document.createElement("li");
-         li.textContent = messages[i].msg;
          li.className = "messageContent"; // Adding the class here
+         li.textContent = `Pseudo: ${messages[i].pseudo} | Message: ${messages[i].msg} | Date: ${messages[i].date}`;
          ul.appendChild(li);
       }
    }
-};
+}
 
 // Initialize messages when DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -52,21 +52,47 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to add a new message
 function addMessage() {
-   const textarea = document.getElementById('messageInput'); // Removed the dot
-   const textareaPseudo = document.getElementById('pseudoInput'); // Removed the dot
+   const textarea = document.getElementById('messageInput');
+   const textareaPseudo = document.getElementById('pseudoInput');
 
    const newMessage = textarea.value;
    const pseudo = textareaPseudo.value;
    if (newMessage.trim() && pseudo.trim()) {
-      msgs.push({ "msg": newMessage, "date": new Date().toLocaleString(), "pseudo": pseudo }); // Corrected date to use new Date()
-      update(msgs); // Update the displayed messages
-      textarea.value = ""; // Clear the text area
+      msgs.push({ "msg": newMessage, "date": new Date().toLocaleString(), "pseudo": pseudo });
+      update(msgs);
+      textarea.value = "";
       console.log("Updated the list with new messages!");
    }
 }
 
 function deleteMessages() {
-   msgs = []; // Reset the msgs array to empty
+   msgs = [];
    update(msgs);
    console.log("Deleted all messages!");
+}
+
+
+let mode = 0;
+function switchToDarkMode() {
+   const body = document.body;
+   body.setAttribute("class", "dark-mode");
+   mode = 1;
+}
+
+
+function swithToLightMode() {
+   const body = document.body;
+   body.setAttribute("class", "light-mode");
+   mode = 0;
+}
+
+function switchMode() {
+   const modeButton = document.getElementById("modeButton");
+   if (mode === 0) {
+      switchToDarkMode();
+      modeButton.textContent = "🌙"; // Moon icon for dark mode
+   } else {
+      swithToLightMode();
+      modeButton.textContent = "☀️"; // Sun icon for light mode
+   }
 }
