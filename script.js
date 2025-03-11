@@ -40,17 +40,19 @@ let msgs = [
    { "msg": "I love cats" }
 ];
 
+
+// This function update messages by deleting all existing messages and replacing by the one from the argument
 function update(messages) {
    let ul = document.getElementById("messages");
    if (ul) {
       ul.innerHTML = "";
       for (let i = 0; i < messages.length; i++) {
          let li = document.createElement("li");
-         li.innerHTML = messages[i].msg;
+         li.textContent = messages[i].msg;
          li.className = "messageContent"; // Adding the class here
          ul.appendChild(li);
       }
-      console.log("Updated the list with new messages !");
+
    }
 };
 
@@ -68,7 +70,15 @@ function addMessage() {
       update(msgs); // Update the displayed messages
       textarea.value = ""; // Clear the text area
    }
+   console.log("Updated the list with new messages !");
 }
 
+
+
+function deleteMessages() {
+   msgs = []; // Reset the msgs array to empty
+   update(msgs);
+   console.log("Deleted all messages !");
+}
 
 
