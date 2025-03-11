@@ -35,9 +35,9 @@ console.log("The applique function for an unamed function", applique(function(n)
 
 
 let msgs = [
-   { "msg": "Hello World" },
-   { "msg": "Blah Blah" },
-   { "msg": "I love cats" }
+   { "msg": "Hello World", "pseudo": "user 1", "date": "01/01/1970" },
+   { "msg": "Blah Blah", "pseudo": "user 1", "date": "01/01/1970" },
+   { "msg": "I love cats", "pseudo": "user 1", "date": "01/01/1970" }
 ];
 
 
@@ -63,14 +63,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to add a new message from the text area
 function addMessage() {
-   const textarea = document.querySelector('.messageInput');
+   const textarea = document.getElementById('.messageInput');
+
+   const textareaPseudo = document.getElementById('.pseudoInput');
+
    const newMessage = textarea.value;
-   if (newMessage.trim()) {
-      msgs.push({ "msg": newMessage }); // Add new message to the msgs array
+   const pseudo = textareaPseudo.value;
+   if (newMessage.trim() && pseudo.trim()) {
+      msgs.push({ "msg": newMessage, "date": Date, "pseudo": pseudo }); // Add new message to the msgs array
       update(msgs); // Update the displayed messages
       textarea.value = ""; // Clear the text area
+      console.log("Updated the list with new messages !");
    }
-   console.log("Updated the list with new messages !");
+
 }
 
 

@@ -13,6 +13,12 @@ body {
 
 .mainTitle {
   text-align: center;
+  color: #E37400;
+  margin-top: 50px;
+}
+
+.secondaryTitle {
+  text-align: center;
   color: #174EA6;
   margin-top: 20px;
   /* Fixed the typo here */
@@ -43,7 +49,7 @@ body {
   border-bottom: none;
 }
 
-.messageInput {
+.textInput {
   width: calc(100% - 20px);
   padding: 10px;
   margin: 20px auto;
