@@ -8,7 +8,15 @@ body {
   height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
+
+}
+
+.light-mode {
   background-color: #f0f0f0;
+}
+
+.dark-mode {
+  background-color: #080126;
 }
 
 .mainTitle {
@@ -90,4 +98,33 @@ body {
 
 #deleteButton:hover {
   background-color: #EA4335;
+}
+
+.mode-button {
+  border-radius: 50%;
+  /* Make the button round */
+  width: 50px;
+  /* Set a width */
+  height: 50px;
+  /* Set a height */
+  display: flex;
+  /* Use flexbox for centering */
+  align-items: center;
+  /* Center vertically */
+  justify-content: center;
+  /* Center horizontally */
+  border: none;
+  /* Remove default border */
+  outline: none;
+  /* Remove focus outline */
+  cursor: pointer;
+  /* Change cursor on hover */
+  transition: background-color 0.3s;
+  /* Smooth transition */
+  background-color: #0b43b3;
+}
+
+.mode-button:hover {
+  background-color: #ddd;
+  /* Change color on hover */
 }
