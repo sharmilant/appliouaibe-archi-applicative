@@ -103,7 +103,7 @@ function switchMode() {
  * Communiquer avec le serveur
 *******************************/
 
-baseUrl = "https://64dc4e13-1de1-4ba6-8be3-5701b3359d19-00-mhwa819etueu.riker.replit.dev"
+baseUrl = "https://appliouaibe-archi-applicative-server-side.onrender.com"
 
 /***************************** 
  * 3.1 - Prise en main
